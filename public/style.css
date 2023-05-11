@@ -1,0 +1,217 @@
+body {
+  background-color: #7f0920;
+  color: #0a0408;
+}
+
+#appTitle {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 80px;
+}
+
+#genreForm, #playBtn {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+#movieInfo, #likeLists {
+  width:  65%;
+  margin:  32px auto;
+  box-shadow: 8px 8px 15px 2px #0a0408;
+  border-radius: 10px;
+}
+
+#movieInfo:after, #likeLists:after {
+  content:  "";
+  display:  table;
+  clear:  both;
+}
+
+#moviePoster {
+  width:  50%;
+  float:  left;
+}
+
+img#moviePoster {
+  width:  100%;
+  height:  auto;
+  display:  block;
+  margin:  auto;
+  border-radius: 10px;
+}
+
+.actor img, .movieImgSmall img {
+  width: 70px;
+  margin: 5px 10px 5px 0;
+  border-radius: 10px;
+}
+
+.actor, .movieImgSmall {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.actor p, .actor h3 {
+  margin: 3px auto;
+}
+
+#movieText {
+  font-family: 'Questrial';
+  color: #FEFBEA;
+  line-height: 1.25;
+  padding: 0 5% 0 5%;
+  max-width: 40%;
+  float: left;
+}
+
+#movieTitle, #movieOverview, #movieCast {
+  margin: 0;
+  padding-top: 20px;
+}
+
+#movieDate {
+  margin: 0;
+  padding: 0;
+}
+
+#movieDate, h3 {
+  font-size: 18px;
+}
+
+#castContainer ul {
+  max-height: 300px;
+  overflow-y: scroll;
+  padding-left: 0;
+}
+
+ul::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;  
+  background-color: rgba(0, 0, 0, 0.158);
+  border-radius: 20px;
+}
+ul::-webkit-scrollbar-thumb {
+  background-color: rgba(26, 23, 23, 0.884);
+  border-radius: 20px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+#playBtn {
+  margin-top: 20px;
+  font-size: 25px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #B97828;
+  color: #fdc238;
+  cursor:  pointer;
+}
+
+label {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 200px;
+  height: auto;
+}
+
+#likeOrDislikeBtns {
+  text-align: center;
+  margin: 0px auto;  
+}
+
+#likeBtn, #dislikeBtn {
+  padding: 15px 25px;
+  font-size: 25px;
+  border-radius: 12px;
+  border-style: none;
+  cursor:  pointer;
+}
+
+#likeBtn {
+  background-color: #249e57;
+  color: darkgreen;
+}
+
+#dislikeBtn {
+  background-color: #c74a4a;
+  color: #910000;
+}
+
+section#likeLists {  
+  box-shadow: none;
+
+}
+#movieLists {
+  text-align: center;
+  margin: 45px auto 20px auto;
+  display: block;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 34px;
+}
+#likeMovie, #unlikeMovie {
+  width: 49%;
+  border: 1px solid #0a0408;
+  border-radius: 10px;
+  background-color: #FEFBEA;
+  float: left;
+}
+#likeMovie .headerList {
+  color:#249e57;
+}
+#unlikeMovie .headerList {
+  color:#c74a4a;
+}
+.headerList {  
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 24px;
+}
+.headerList h3 {
+  display: inline-block;
+  font-size: 24px;
+}
+.headerList i {
+  padding-left: 20px;
+}
+#likeUl, #unlikeUl {
+  list-style-type: none;
+  font-family: 'Questrial';
+  color:#0a0408;
+  font-size: 24px;
+  height: 300px;
+  overflow-y:scroll;
+}
+
+@media screen and (max-width: 900px) {
+  #movieInfo, #likeLists {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #movieInfo, #likeLists {
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+  }
+  #moviePoster, #likeMovie, #unlikeMovie {
+    align-self: center;    
+    width: 100%;
+  }
+  #movieText {max-width: fit-content;}
+  #movieTitle, #movieDate, #movieOverview, #movieCast {
+    text-align: center;
+  }
+}
